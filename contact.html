@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hamlet</title>
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400i,700|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header class="header header-home main-grid">
+        <div class="header-content">
+            <a class="logo-link" href="index.html">
+            <img src="Images/hamlet_logo.png" alt="logo" class="logo" height="70">
+            </a>
+            <button aria-label="Open navigation" class="open-nav">&#9776;</button>
+
+            <nav class="nav">
+                <button aria-label="Close navigation" class="close-nav">&times;</button><ul class="nav-list">
+                    <li class="nav-item"><a href="plot.html" class="nav-link">Plot</a></li>
+                    <li class="nav-item"><a href="quotes.html" class="nav-link">Quotes</a></li>
+                    <li class="nav-item"><a href="author.html" class="nav-link">Author</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<main class="main-template main-grid">
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="page-title"> Contact Us</h2>
+            <div class="main-text">
+            <form action="/action_page.php">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your Name..">
+          
+              <label for="lname">Surname</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your Surname..">
+          
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="norway">Norway</option>
+                <option value="sweden">Sweden</option>
+                <option value="denmark">Denmark</option>
+              </select>
+          
+              <label for="subject">Message</label>
+              <textarea id="subject" name="subject" placeholder="Write us a message here..." style="height:200px"></textarea>
+          
+              <input type="submit" value="Send">
+            </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</main>
+<footer></footer>
+
+</body>
+</html>

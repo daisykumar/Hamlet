@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    font-family: 'Old Standard TT', serif, 'Raleway', sans-serif;
+    color: #000000;
+    line-height: 1.6;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-top: 1.25em;
+}
+
+p, nav{
+    font-family: 'Raleway', sans-serif;
+}
+p{
+    font-size: 1.125rem;    
+    margin-top: 1.25em;
+    margin-bottom: 2em;
+}
+
+span{
+    font-weight: 700;
+}
+
+.headline::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    margin-top: 10px;
+    background: #F80000
+}
+
+
+.main-grid {
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
+    grid-column-gap: 2em;
+}
+
+@media (min-width: 600px) {
+    .main-grid {
+        grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(150px, 320px)) minmax(1em, 1fr);
+    }
+
+}
+
+
+/* navigation */
+
+
+.header-content {
+    display: flex;
+    grid-column: 2 / -2;
+    text-transform: uppercase;
+}
+
+.header-home {
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    width: 100%;
+    box-shadow: 0.5px 0.5px 0.5px #000;
+    margin-bottom: 0em;
+}
+
+
+.logo-link {
+    background-color: #fff;
+    padding-top: 0em;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 100%;
+    transform: translateX(0);
+    transition: transform 250ms;
+}
+
+.navigation-open {
+    transform: translateX(-100%);
+    background-color: #000;
+}
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-radius: 2px; 
+    transition: .5s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    border-bottom: 2px solid #fff;
+    /*color: #F80000;
+    background: #f2f2f2;
+    padding: 0.5em;
+    transform: scale(0.1); */
+    font-size: 1.4rem;
+}
+
+.close-nav{
+    border: 0;
+    background: 0;
+    color: #F66C03;
+    font-weight: 700;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: .5em;
+    position: absolute;
+}
+
+.open-nav {
+    border: 0;
+    background: 0;
+    color: #fff;
+    cursor: pointer;
+    padding: .5em;
+    margin-left: auto;
+    font-size: 1.5em;
+}
+
+@media (min-width: 750px) {
+    .open-nav,
+    .close-nav {
+        display: none;
+    }
+    
+    .nav {
+        position: initial;
+    }
+    
+    .nav-list {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .nav-item {
+        margin-left: 2em;
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+    }
+    
+    .navigation-open {
+      transform: translateX(-0%);
+    }
+}
+
+
+
+/* ====== Plot Section ====== 
+Typography Section*/
+
+.page-title {
+    font-size: 3rem;
+    margin: 1em 0 .5em 0;
+    text-align: center;
+    justify-self: center;
+}
+
+.main-template {
+    padding: 4em 0;
+}
+
+.main-template > * {
+    grid-column: 2 / -2;
+}
+.main-image{
+    box-shadow: 5px 5px 5px grey;
+}
+
+.page-title::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #F80000;
+    margin-top: 0em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 750px) {
+    .main-image {
+        grid-column: 2;
+        margin-top: 1.5em;
+    }
+    
+    .main-text {
+        grid-column: 3 / span 2;
+    }
+}
+
+/* CONTACT US FORM =====================
+====================== 
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 1em;
+    font-family: 'Old Standard TT', serif;
+    grid-column: 2 / -2;
+}
+form{
+    font-family: 'Raleway', sans-serif;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color:#000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #494747;
+    color: #fff;
+  }
+*/
+/* ======= FOOTER SECTION ===== 
+======*/
+footer{
+    background: black;
+    padding: 1em;
+}
